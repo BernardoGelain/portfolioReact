@@ -22,9 +22,9 @@ export default function MainContent() {
           <span className="description">
             Sou um desenvolvedor altamente dedicado e comprometido em criar
             soluções inovadoras. Minha abordagem focada, combinada com
-            excelentes habilidades de resolução de problemas, permite-me
+            excelentes habilidades de resolução de problemas, permitem-me
             enfrentar desafios complexos com confiança. Além disso, minha
-            capacidade de trabalho em equipe e comunicação eficaz me tornam um
+            capacidade de trabalho em equipe e comunicação eficaz tornam-me um
             colaborador valioso em qualquer projeto.
           </span>
           <ContactButton>Contato</ContactButton>

@@ -1,12 +1,12 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import Routes from "./routes/routes";
 import { ThemeProvider } from "styled-components";
 
 import { GlobalStyle } from "./styles/global";
-import { lightTheme } from "./styles/themes.ts/light";
-import { darkTheme } from "./styles/themes.ts/dark";
+import { lightTheme } from "./styles/theme/light";
+import { darkTheme } from "./styles/theme/dark";
 
-type Themes = "light" | "dark";
+type Themes = "light" | "dark" | undefined;
 
 interface ThemeContextType {
   theme: Themes;
@@ -17,10 +17,11 @@ function App() {
   const [theme, setTheme] = useState<Themes>(() => {
     const storageValue = localStorage.getItem("GELAIN-THEME:theme-1.0.0");
 
-    if (storageValue) {
-      return JSON.parse(storageValue);
+    if (storageValue == "light") {
+      return "light";
+    } else if (storageValue == "dark" || !storageValue) {
+      return "dark";
     }
-    return "dark";
   });
 
   function toogleTheme() {
