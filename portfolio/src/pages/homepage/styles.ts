@@ -22,12 +22,13 @@ export const ContainerTechs = styled.div`
   display: flex;
   margin-inline: auto;
   gap: 80px;
-  width: 60%;
+  width: 70%;
   flex-wrap: wrap;
   margin-bottom: 100px;
   @media (max-width: 595px) {
     gap: 20px;
     width: 60%;
+    margin-left: 20%;
   }
 `;
 export const Tech = styled.img`

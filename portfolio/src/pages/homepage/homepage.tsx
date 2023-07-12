@@ -61,7 +61,7 @@ export default function Homepage() {
         <Tech src="/assets/ts.png" />
         <Tech src="/assets/react.png" />
         <Tech src="/assets/redux.png" />
-        {/*  <Tech src="/assets/next.png" /> */}
+        <Tech src="/assets/react-query.svg" />
         <Tech src="/assets/sql.png" />
         <Tech src="/assets/php.png" />
         <Tech src="/assets/laravel.png" />
