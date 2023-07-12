@@ -18,6 +18,10 @@ export const ContainerSocials = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
+  }
+  .email {
+    margin-left: -10px;
   }
 `;
 export const TextFooterSocial = styled.span`

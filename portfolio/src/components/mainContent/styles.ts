@@ -34,9 +34,11 @@ export const SpanContainer = styled.div`
 `;
 export const Coder = styled.img`
   width: 400px;
+
   min-height: 400px;
   @media (max-width: 750px) {
-    min-height: 200px;
+    min-height: 300px;
+    margin-top: 30px;
   }
 `;
 export const ArrowContainer = styled.div`
@@ -44,7 +46,7 @@ export const ArrowContainer = styled.div`
   justify-content: center;
   margin-top: 20px;
   @media (max-width: 650px) {
-    margin-top: 40px;
+    margin-top: 70px;
   }
 `;
 

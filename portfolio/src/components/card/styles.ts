@@ -8,6 +8,7 @@ export const CardContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.backgroundMenu};
   margin-bottom: 20px;
   margin-inline: auto;
+  cursor: pointer;
   @media (max-width: 550px) {
     width: 300px;
     height: 500px;
@@ -39,6 +40,7 @@ export const Title = styled.span`
 export const ContainerButtons = styled.div`
  display: flex: 
  flex-direction: row;
+ margin-left:15px ;
 `;
 
 export const ProjectDescription = styled.span`

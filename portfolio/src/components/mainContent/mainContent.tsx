@@ -27,7 +27,11 @@ export default function MainContent() {
             capacidade de trabalho em equipe e comunicação eficaz tornam-me um
             colaborador valioso em qualquer projeto.
           </span>
-          <ContactButton>Contato</ContactButton>
+          <ContactButton
+            onClick={() => window.open("https://wa.me/555499728862")}
+          >
+            Contato
+          </ContactButton>
         </SpanContainer>
         <Coder
           src={

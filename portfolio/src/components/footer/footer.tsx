@@ -18,15 +18,26 @@ export default function Footer() {
     <>
       <FooterContainer>
         <ContainerSocials>
-          <div>
+          <div
+            onClick={() => {
+              window.open("https://linkedin.com/in/bernardogelaindariva/");
+            }}
+          >
             <SocialImg src={imgLinkedin} />
             <TextFooterSocial>
               linkedin.com/in/bernardogelaindariva/
             </TextFooterSocial>
           </div>
-          <div>
+          <div
+            onClick={() => {
+              window.open("https://github.com/BernardoGelain");
+            }}
+          >
             <SocialImg src={imgGithub} />
             <TextFooterSocial>github.com/BernardoGelain</TextFooterSocial>
+          </div>
+          <div className="email">
+            <TextFooterSocial>bernardogdariva@gmail.com</TextFooterSocial>
           </div>
         </ContainerSocials>
         <LastPhrase>"Veritax lux mea."</LastPhrase>

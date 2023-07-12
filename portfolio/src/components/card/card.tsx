@@ -1,3 +1,4 @@
+import { Repo } from "../../model/Repo";
 import TagTech from "../tagTech/tagTech";
 import {
   CardContainer,
@@ -8,22 +9,24 @@ import {
   Title,
 } from "./styles";
 
-export default function Card() {
+type Props = {
+  repo: Repo;
+};
+export default function Card({ repo }: Props) {
   return (
     <>
-      <CardContainer>
+      <CardContainer
+        onClick={() => {
+          window.open(repo.html_url);
+        }}
+      >
         <ImgCard src="/assets/template.jpg" />
         <InfoContainer>
-          <Title>Projeto</Title>
+          <Title>{repo.name.toUpperCase()}</Title>
           <ContainerButtons>
-            <TagTech />
+            {repo && <TagTech url={repo.languages_url} />}
           </ContainerButtons>
-          <ProjectDescription>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-            id vitae assumenda mollitia? Fugit repellendus rerum molestias!
-            Error, aut! Quibusdam a voluptatum at earum similique illo non illum
-            laudantium voluptates.
-          </ProjectDescription>
+          <ProjectDescription>{repo.description}</ProjectDescription>
         </InfoContainer>
       </CardContainer>
     </>

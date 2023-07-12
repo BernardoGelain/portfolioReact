@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/global";
 import { lightTheme } from "./styles/theme/light";
 import { darkTheme } from "./styles/theme/dark";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 type Themes = "light" | "dark" | undefined;
 
@@ -14,6 +15,7 @@ interface ThemeContextType {
 }
 export const ThemeContext = createContext({} as ThemeContextType);
 function App() {
+  const queryClient = new QueryClient();
   const [theme, setTheme] = useState<Themes>(() => {
     const storageValue = localStorage.getItem("GELAIN-THEME:theme-1.0.0");
 
@@ -36,8 +38,10 @@ function App() {
     <>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <ThemeContext.Provider value={{ theme, toogleTheme }}>
-          <GlobalStyle />
-          <Routes />
+          <QueryClientProvider client={queryClient}>
+            <GlobalStyle />
+            <Routes />
+          </QueryClientProvider>
         </ThemeContext.Provider>
       </ThemeProvider>
     </>
