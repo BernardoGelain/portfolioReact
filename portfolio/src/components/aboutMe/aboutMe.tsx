@@ -14,7 +14,7 @@ export default function AboutMe() {
         <ContainerDescription>
           <Bar />
           <AboutMeDescription>
-            Com mais de 2 anos de experiência como desenvolvedor React, possuo
+            Com mais de 4 anos de experiência como desenvolvedor React, possuo
             um amplo conhecimento e domínio dessa tecnologia. Utilizando
             TypeScript, sou capaz de criar aplicações web robustas e eficientes.
             Além disso, tenho expertise no uso de ferramentas complementares,
